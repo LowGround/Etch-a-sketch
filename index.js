@@ -8,7 +8,7 @@ btn2.addEventListener('click', clearArea);
 btn3.addEventListener('click', randomColor);
 
 // Starting 16x16 grid
-makeGrid(16);
+
 
 function resize() {
     const num = prompt('Please enter a number to change the size of the grid');
@@ -23,7 +23,7 @@ function makeGrid(num) {
     for (let i=0; i < (num * num); i++) {
         
         let newblock = document.createElement('div');
-        newblock.addEventListener('mouseenter', (e) => {
+            newblock.addEventListener('mouseenter', (e) => {
             e.target.style.backgroundColor = '#32a89e';
         });
         newblock.classList.add('color-grid');
@@ -37,7 +37,7 @@ function clearArea() {
     container.textContent = "";
     while (container.firstChild) {
         container.removeChild(container.lastChild);
-    } makeGrid(16);
+    } makeGrid();
 }
 
 function randomColor() {
